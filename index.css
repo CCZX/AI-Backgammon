@@ -21,4 +21,7 @@
     background-origin: content-box;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    line-height: 50px;
+    text-align: center;
+    color: aqua;
 }

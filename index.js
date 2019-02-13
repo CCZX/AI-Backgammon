@@ -7,7 +7,7 @@ var AI = false;//AI开关
 function createGrid(x, y) {//创建棋盘节点div
     var temp = document.createElement("div");
     temp.classList.add("grid");
-    temp.style.left = (7 + x * 50 )+ "px";;
+    temp.style.left = (7 + x * 50 )+ "px";
     temp.style.top = (7 + y * 50) + "px";
     temp.x = x;
     temp.y = y;
@@ -54,7 +54,8 @@ function init() {//初始化方法
                 count += 1;//棋盘棋子数+1
                 var result = checkFinish();//检查是否结束
                 if (result == 0) {//没结束
-                    if (AI) {//判断是否有AI
+                    if (AI && count % 2 == 1) {//判断是否有AI
+                        block = false;//关闭锁
                         aiAction();//AI落子
                     }
                     block = false;//关闭锁
