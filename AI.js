@@ -264,7 +264,22 @@ function aiAction() {
             }
         }
     }
-    bestGrid.click();
+    if (bestGrid == null) {
+        for (var i = 0 ; i < grid.length ; i ++) {
+            for (var j = 0; j < grid[i].length; j++) {
+                if (grid[i][j].value == 0) {
+                    bestGrid = grid[i][j];
+                    break;
+                }
+            }
+        }
+    }
+    if (bestGrid == null) {
+        alert("平局了");
+    }
+    setTimeout(function () {
+        bestGrid.click();
+    }, 20);
 }
 
 var debugBtn = document.createElement("button");
