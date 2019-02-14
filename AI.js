@@ -222,6 +222,9 @@ function compareScore(originType, originScore, originPower, nowType, nowScore, n
     if (originScore == nowScore && originPower > nowPower) {
         return true;
     }
+    if (originScore == nowScore && originPower == nowPower && originType == nowType) {
+        return Math.random() > 0.5 ? true : false;
+    }
     if (originScore == nowScore && originPower == nowPower && originType == 1) {
         return true;
     }
