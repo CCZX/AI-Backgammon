@@ -62,6 +62,7 @@ function init() {//初始化方法
                 } else {//结束了
                     setTimeout(function () {
                         alert(result == 1 ? "黑棋胜" : "白棋胜");//弹出获胜方
+                        history.go(0)
                     }, 200);
                 }
             }
